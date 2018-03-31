@@ -1,0 +1,2 @@
+javascript:(function (){var s = document.createElement('script');s.setAttribute('src', 'https://rawgit.com/amazinigmech2418/ElementNet-ScratchExtension/master/report.js');document.body.appendChild(s);})();
+javascript:(function (){var s = document.createElement('script');s.setAttribute('src', 'https://rawgit.com/amazinigmech2418/PrimeExt/master/main.js');document.body.appendChild(s);})();
