@@ -40,6 +40,6 @@ geo: ['latitude','longitude']
     return objectlist.length;
     }
     // Name of Scratch Extension goes here
-    ScratchExtensions.register('Keys', descriptor, ext); 
+    ScratchExtensions.register('Objects', descriptor, ext); 
      // The name is 'Hello, World!''
 })({});
