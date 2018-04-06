@@ -17,7 +17,8 @@ var objectlist = [];
             [' ', 'set object %n property %s to %s', 'so', 0, "username", "AmazingMech2418"],
             [' ', 'new object', 'newO'],
             ['r', 'get object number %n property %s', 'go', 0, "username"],
-            ['r', 'number of objects','no']
+            ['r', 'number of objects','no'],
+            ['b','true','t']
         ],
 menus: {
 txt: ['hi','bye','how are you?'],
@@ -39,6 +40,7 @@ geo: ['latitude','longitude']
     ext.no = function() {
     return objectlist.length;
     }
+    ext.t = function(){return true;}
     // Name of Scratch Extension goes here
     ScratchExtensions.register('Objects', descriptor, ext); 
      // The name is 'Hello, World!''
