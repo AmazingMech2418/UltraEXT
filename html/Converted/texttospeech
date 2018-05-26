@@ -1,0 +1,102 @@
+// Extension converted by Mrcomputer1's ScratchXto3
+// https://mrcomputer1.github.io/ScratchXto3
+var speechdata = new webkitSpeechRecognition();
+var speak = function(text) {
+speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+}
+var zz;
+speechdata.onresult = function(e) {zz = e.results[0][0].transcript;}
+var Extext = function(){};
+
+Extext.prototype.getInfo = function(){
+	
+	(function(){})();
+	
+	return {
+		id: "ext",
+		name: "speech",
+		iconURI: "",
+		docsURI: "",
+		blocks: [
+			
+			{
+				opcode: "gs",
+				blockType: Scratch.BlockType.COMMAND,
+				isTerminal: false,
+				text: "get speech",
+				arguments: {
+					
+				},
+				func: "gs",
+				
+			},
+			
+			{
+				opcode: "say",
+				blockType: Scratch.BlockType.COMMAND,
+				isTerminal: false,
+				text: "say [ARG_0]",
+				arguments: {
+					
+					ARG_0: {
+						type: Scratch.ArgumentType.STRING,
+						defaultValue: "",
+						
+					},
+					
+				},
+				func: "say",
+				
+			},
+			
+			{
+				opcode: "s",
+				blockType: Scratch.BlockType.REPORTER,
+				isTerminal: false,
+				text: "Speech",
+				arguments: {
+					
+				},
+				func: "s",
+				
+			},
+			
+		],
+		menus: {
+			
+			"txt": ["hi","bye","how are you?"],
+			
+			"superMath": ["radian sine","radian cosine","radian tangent","asin","atan","acos","power"],
+			
+			"geo": ["latitude","longitude"],
+			
+		}
+	};
+	
+};
+
+
+
+Extext.prototype.gs = function(args){
+	var inner = function() {
+speechdata.start();
+};
+	return inner();
+};
+
+Extext.prototype.say = function(args){
+	var inner = function(a) {
+speak(a);
+};
+	return inner(args.ARG_0);
+};
+
+Extext.prototype.s = function(args){
+	var inner = function() {
+return zz;
+};
+	return inner();
+};
+
+
+Scratch.extensions.register(new Extext());
